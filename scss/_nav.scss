@@ -1,0 +1,115 @@
+nav {
+    background-color: #fff;
+    width: 100%;
+
+    .wrapper {
+        max-width: $max-width;
+        width: 90%;
+        background-color: #ddd;
+        margin: auto;
+        @include display-flex(row, flex-start, center);
+
+        .logo {
+            text-align: center;
+            flex-basis: 10%;
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .menu {
+            flex-grow: 1;
+
+            ul {
+                list-style: none;
+                @include display-flex(row, center, center);
+
+                li {
+                    border-right: 1px solid black;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-weight: 700;
+                        padding: 0 30px;
+                    }
+                }
+
+            }
+        }
+
+        .menu-phone {
+            text-align: center;
+            flex-basis: 20%;
+
+            a {
+                text-decoration: none;
+                color: #000;
+                transition: .3s;
+
+                &:hover {
+                    color: royalblue;
+                }
+            }
+        }
+    }
+}
+
+// hamburger icon
+
+.btn-hamburger {
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    right: calc(0px + 24px);
+    line-height: 8vh;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 1s;
+    color: red;
+}
+
+@media (max-width: 992px) {
+    nav {
+        height: 8vh;
+
+        .wrapper {
+            width: 20%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: -20%;
+            @include display-flex(column, center, stretch);
+
+            .menu {
+                ul {
+                    @include display-flex(column, space-around, center);
+                    height: 100%;
+
+                    li {
+                        border-right: none;
+                        border-bottom: 1px solid black;
+
+                        &:last-child {
+                            border-bottom: 1px solid black;
+                        }
+
+                        a {
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+
+            .menu-phone {
+                @include display-flex(column, center, center);
+            }
+        }
+    }
+}
