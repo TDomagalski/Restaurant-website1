@@ -2,11 +2,16 @@ nav {
     background-color: #fff;
     width: 100%;
 
+    .showNav {
+        right: 0% !important;
+    }
+
     .wrapper {
         max-width: $max-width;
         width: 90%;
-        background-color: #ddd;
+        // background-color: #ddd;
         margin: auto;
+        transition: .5s;
         @include display-flex(row, flex-start, center);
 
         .logo {
@@ -71,8 +76,13 @@ nav {
     line-height: 8vh;
     background-color: transparent;
     cursor: pointer;
-    transition: 1s;
     color: red;
+    display: none;
+    transition: .5s;
+}
+
+.btn-hamburger_left {
+    right: calc(0px + 24px + 20%);
 }
 
 @media (max-width: 992px) {
@@ -94,14 +104,26 @@ nav {
 
                     li {
                         border-right: none;
-                        border-bottom: 1px solid black;
+                        width: 100%;
+                        text-align: center;
+                        transition: .5s;
+                        border-radius: 0%;
+                        @include display-flex(row, center, center);
 
-                        &:last-child {
-                            border-bottom: 1px solid black;
+                        &:hover {
+                            background-color: royalblue;
+                            border-radius: 50%;
+
+                            a {
+                                width: 40%;
+                            }
                         }
 
                         a {
-                            padding: 10px 0;
+                            width: 30%;
+                            padding: 20px 0;
+                            border-bottom: 2px solid black;
+                            transition: .5s;
                         }
                     }
                 }
@@ -110,6 +132,10 @@ nav {
             .menu-phone {
                 @include display-flex(column, center, center);
             }
+        }
+
+        .btn-hamburger {
+            display: block;
         }
     }
 }

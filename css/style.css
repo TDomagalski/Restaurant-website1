@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: #aaa;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,11 +15,16 @@ nav {
   width: 100%;
 }
 
+nav .showNav {
+  right: 0% !important;
+}
+
 nav .wrapper {
   max-width: 1200px;
   width: 90%;
-  background-color: #ddd;
   margin: auto;
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,9 +114,14 @@ nav .wrapper .menu-phone a:hover {
   line-height: 8vh;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
   color: red;
+  display: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-hamburger_left {
+  right: calc(0px + 24px + 20%);
 }
 
 @media (max-width: 992px) {
@@ -156,13 +165,38 @@ nav .wrapper .menu-phone a:hover {
   }
   nav .wrapper .menu ul li {
     border-right: none;
-    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  nav .wrapper .menu ul li:last-child {
-    border-bottom: 1px solid black;
+  nav .wrapper .menu ul li:hover {
+    background-color: royalblue;
+    border-radius: 50%;
+  }
+  nav .wrapper .menu ul li:hover a {
+    width: 40%;
   }
   nav .wrapper .menu ul li a {
-    padding: 10px 0;
+    width: 30%;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   nav .wrapper .menu-phone {
     display: -webkit-box;
@@ -178,6 +212,9 @@ nav .wrapper .menu-phone a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  nav .btn-hamburger {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
