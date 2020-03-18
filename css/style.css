@@ -75,6 +75,7 @@ nav .wrapper .menu ul {
 
 nav .wrapper .menu ul li {
   border-right: 1px solid black;
+  position: relative;
 }
 
 nav .wrapper .menu ul li:last-child {
@@ -87,6 +88,56 @@ nav .wrapper .menu ul li a {
   color: #000;
   font-weight: 700;
   padding: 0 30px;
+}
+
+nav .wrapper .menu ul li a i {
+  position: relative;
+}
+
+nav .wrapper .menu ul li a i:before {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+nav .wrapper .menu ul li .menu-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  text-align: center;
+  top: -400%;
+  opacity: 0;
+  z-index: -1;
+  left: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+nav .wrapper .menu ul li .menu-drop a {
+  width: 150px;
+  padding: 0;
+}
+
+nav .wrapper .menu ul li .menu-drop a img {
+  width: 70%;
+}
+
+nav .wrapper .menu ul li .menu-dropClic {
+  top: 100%;
+  opacity: 1;
+  z-index: 1;
 }
 
 nav .wrapper .menu-phone {
@@ -114,10 +165,19 @@ nav .wrapper .menu-phone a:hover {
   line-height: 8vh;
   background-color: transparent;
   cursor: pointer;
-  color: red;
   display: none;
   -webkit-transition: .5s;
   transition: .5s;
+  color: red;
+}
+
+.btn-hamburger i {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btnHamIcon {
+  color: black;
 }
 
 .btn-hamburger_left {
@@ -147,6 +207,9 @@ nav .wrapper .menu-phone a:hover {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+  }
+  nav .wrapper .menu {
+    position: relative;
   }
   nav .wrapper .menu ul {
     display: -webkit-box;
@@ -188,15 +251,51 @@ nav .wrapper .menu-phone a:hover {
     background-color: royalblue;
     border-radius: 50%;
   }
-  nav .wrapper .menu ul li:hover a {
-    width: 40%;
-  }
   nav .wrapper .menu ul li a {
-    width: 30%;
     padding: 20px 0;
     border-bottom: 2px solid black;
     -webkit-transition: .5s;
     transition: .5s;
+  }
+  nav .wrapper .menu ul li .menu-drop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 500%;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  nav .wrapper .menu ul li .menu-drop a {
+    width: 150px;
+    padding: 0;
+  }
+  nav .wrapper .menu ul li .menu-drop a img {
+    width: 70%;
+  }
+  nav .wrapper .menu ul li .menu-dropClic {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 150px;
+    opacity: 1;
+    z-index: 1;
   }
   nav .wrapper .menu-phone {
     display: -webkit-box;

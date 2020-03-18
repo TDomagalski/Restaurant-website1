@@ -9,7 +9,6 @@ nav {
     .wrapper {
         max-width: $max-width;
         width: 90%;
-        // background-color: #ddd;
         margin: auto;
         transition: .5s;
         @include display-flex(row, flex-start, center);
@@ -32,6 +31,7 @@ nav {
 
                 li {
                     border-right: 1px solid black;
+                    position: relative;
 
                     &:last-child {
                         border: none;
@@ -43,6 +43,42 @@ nav {
                         color: #000;
                         font-weight: 700;
                         padding: 0 30px;
+
+                        i {
+                            position: relative;
+
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                transform: translateY(-100%);
+                            }
+                        }
+                    }
+
+                    .menu-drop {
+                        @include display-flex(row, flex-start, flex-start);
+                        position: absolute;
+                        text-align: center;
+                        top: -400%;
+                        opacity: 0;
+                        z-index: -1;
+                        left: 0;
+                        transition: .5s;
+
+                        a {
+                            width: 150px;
+                            padding: 0;
+
+                            img {
+                                width: 70%;
+                            }
+                        }
+                    }
+
+                    .menu-dropClic {
+                        top: 100%;
+                        opacity: 1;
+                        z-index: 1;
                     }
                 }
 
@@ -76,9 +112,17 @@ nav {
     line-height: 8vh;
     background-color: transparent;
     cursor: pointer;
-    color: red;
     display: none;
     transition: .5s;
+    color: red;
+
+    i {
+        transition: .5s;
+    }
+}
+
+.btnHamIcon {
+    color: black;
 }
 
 .btn-hamburger_left {
@@ -98,6 +142,8 @@ nav {
             @include display-flex(column, center, stretch);
 
             .menu {
+                position: relative;
+
                 ul {
                     @include display-flex(column, space-around, center);
                     height: 100%;
@@ -113,17 +159,42 @@ nav {
                         &:hover {
                             background-color: royalblue;
                             border-radius: 50%;
-
-                            a {
-                                width: 40%;
-                            }
                         }
 
                         a {
-                            width: 30%;
                             padding: 20px 0;
                             border-bottom: 2px solid black;
                             transition: .5s;
+                        }
+
+                        .menu-drop {
+                            @include display-flex(row, flex-start, flex-start);
+                            flex-wrap: wrap;
+                            position: absolute;
+                            text-align: center;
+                            top: 0;
+                            left: 500%;
+                            opacity: 0;
+                            z-index: -1;
+                            transition: .5s;
+
+                            a {
+                                width: 150px;
+                                padding: 0;
+
+                                img {
+                                    width: 70%;
+                                }
+                            }
+                        }
+
+                        .menu-dropClic {
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 150px;
+                            opacity: 1;
+                            z-index: 1;
                         }
                     }
                 }
