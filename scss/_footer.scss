@@ -1,0 +1,87 @@
+.bg-gold {
+    background-color: #a29161;
+}
+
+footer {
+    padding: 40px 0;
+    @include display-flex(row, space-around, center);
+    font-size: 18px;
+    text-align: center;
+    flex-wrap: wrap;
+
+    .company {
+        flex-basis: 30%;
+        position: relative;
+
+        a {
+            font-family: 'Pacifico', cursive;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .social-media {
+        flex-basis: 30%;
+        font-size: 30px;
+        position: relative;
+
+        a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: .5s;
+        }
+
+
+
+        .facebook {
+            &:hover {
+                color: #3b5998;
+            }
+        }
+
+        .twitter {
+            &:hover {
+                color: #1DA1F2;
+            }
+        }
+
+        .youtube {
+            &:hover {
+                color: #c4302b;
+            }
+        }
+
+        .instagram {
+            &:hover {
+                color: #833AB4;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: black;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: black;
+        }
+    }
+
+    .adress {
+        flex-basis: 30%;
+    }
+}

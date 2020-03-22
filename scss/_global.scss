@@ -5,14 +5,13 @@
 }
 
 body {
-    // background-color: #aaa;
     overflow-X: hidden;
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 .content {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
+    max-width: $max-width;
     margin: auto;
+    position: relative;
 }

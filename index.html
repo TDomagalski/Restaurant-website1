@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant-webpage1</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=latin-ext" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d764878b73.js" crossorigin="anonymous"></script>
 </head>
 
@@ -59,29 +60,145 @@
 
     <div class="img-top"></div>
 
+    <div class="line"></div>
+
     <div class="content">
-        <section class="cust-fav">
-            <h1>Customer favorite</h1>
-            <div>
-                <img src="img/stars.jpg" alt="hamburger">
-                <h4>Hamburger</h4>
-                <p>lorem</p>
-                <button>Przycisk</button>
+        <section class="section1">
+            <h1>Customerfavorites</h1>
+
+            <div class="cust-fav">
+                <div class="cust-fav_img">
+                    <img src="img/stars.jpg" alt="stars">
+                </div>
+                <h2>Hamburger</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita
+                    voluptates deleniti architecto illo! Odio cupiditate numquam praesentium laboriosam doloribus
+                    voluptate ullam. Officia corrupti a beatae labore?</p>
+                <a href="#">Przycisk</a>
             </div>
-            <div>
-                <img src="img/stars.jpg" alt="hamburger">
-                <h4>Pizza</h4>
-                <p>Jakiś tekt</p>
-                <button>Przycisk</button>
+
+            <div class="cust-fav">
+                <div class="cust-fav_img">
+                    <img src="img/stars.jpg" alt="stars">
+                </div>
+                <h2>Pizza</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita
+                    voluptates deleniti architecto illo! Odio cupiditate numquam praesentium laboriosam doloribus
+                </p>
+                <a href="#">Przycisk</a>
             </div>
-            <div>
-                <img src="img/stars.jpg" alt="hamburger">
-                <h4>Zapiekanka</h4>
-                <p>Jakiś tekt</p>
-                <button>Przycisk</button>
+
+            <div class="cust-fav">
+                <div class="cust-fav_img">
+                    <img src="img/stars.jpg" alt="stars">
+                </div>
+                <h2>Zapiekanka</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita
+                    voluptates deleniti architecto illo! Odio cupiditate numquam praesentium laboriosam doloribus
+                    voluptate ullam. Officia corrupti a beatae labore?Lorem ipsum dolor sit amet consectetur
+                    adipisicing
+                </p>
+                <a href="#">Przycisk</a>
             </div>
         </section>
     </div>
+
+    <div class="line"></div>
+
+    <div class="bg-black">
+        <div class="content">
+            <section class="section2">
+                <h2>Our dishes</h2>
+                <div class="gallery">
+                    <!-- div*6>img[src=img/food/food$.jpg][alt=food$] -->
+                    <div><img src="img/food/food1.jpg" alt="food1"></div>
+                    <div><img src="img/food/food2.jpg" alt="food2"></div>
+                    <div><img src="img/food/food3.jpg" alt="food3"></div>
+                    <div><img src="img/food/food4.jpg" alt="food4"></div>
+                    <div><img src="img/food/food5.jpg" alt="food5"></div>
+                    <div><img src="img/food/food6.jpg" alt="food6"></div>
+                </div>
+                <div class="gallery-arrows">
+                    <div class="arr-left"></div>
+                    <div class="arr-right"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="content">
+        <section class="section3">
+            <h1>Plated menu</h1>
+
+            <div class="cust-fav">
+                <h2>Hamburger</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita</p>
+                <a href="#">Więcej</a>
+            </div>
+
+            <div class="cust-fav">
+                <h2>Pizza</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita</p>
+                <a href="#">Więcej</a>
+            </div>
+
+            <div class="cust-fav">
+                <h2>Zapiekanka</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos at suscipit, commodi expedita</p>
+                <a href="#">Więcej</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="content">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="1200" height="500" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=S%C5%82omniki&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"></iframe><a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 100%;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 100%;
+                }
+            </style>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="bg-gold">
+        <footer class="content">
+            <div class="company">
+                <a href="#">Kuchnia Polska</a>
+                <p>© 2020 | privacy policy</p>
+            </div>
+            <div class="social-media">
+                <a class="facebook" href="#"><i class="fab fa-facebook-square"></i></a>
+                <a class="twitter" href="#"><i class="fab fa-twitter-square"></i></a>
+                <a class="youtube" href="#"><i class="fab fa-youtube-square"></i></a>
+                <a class="instagram" href="#"><i class="fab fa-instagram-square"></i></a>
+            </div>
+            <div class="adress">
+                <p>ul. Krakowska 62d</p>
+                <p>32-090, Słomniki</p>
+            </div>
+        </footer>
+    </div>
+
 </body>
 
 <script src="js/scripts.js"></script>
