@@ -10,50 +10,78 @@
 </head>
 
 <body>
-    <nav id="navigation">
-        <div class="wrapper">
-            <div class="logo">
-                <a href="#">
-                    <img src="img/logo.png" alt="logo">
-                </a>
+    <header>
+        <nav id="navigation">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li>
+                            <a href="#" class="clickArrow">Offer <i class="fas fa-sort-down"></i></a>
+                            <div class="menu-drop">
+                                <a href="#">
+                                    <img src="img/ham.png" alt="hamburger">
+                                    <span>Hamburger</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/ham.png" alt="hamburger">
+                                    <span>Hamburger</span>
+                                </a>
+                                <a href="#">
+                                    <img src="img/ham.png" alt="hamburger">
+                                    <span>Hamburger</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Menu <i class="fas fa-sort-down"></i></a>
+                        </li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu-phone">
+                    <a href="tel:+48508987001">
+                        <i class="fas fa-phone"> +48 508-987-001</i>
+                    </a>
+                </div>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li>
-                        <a href="#" class="clickArrow">Offer <i class="fas fa-sort-down"></i></a>
-                        <div class="menu-drop">
-                            <a href="#">
-                                <img src="img/ham.png" alt="hamburger">
-                                <span>Hamburger</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/ham.png" alt="hamburger">
-                                <span>Hamburger</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/ham.png" alt="hamburger">
-                                <span>Hamburger</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Menu <i class="fas fa-sort-down"></i></a>
-                    </li>
-                    <li><a href="#">Images</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <div class="btn-hamburger">
+                <i class="fas fa-hamburger"></i>
             </div>
-            <div class="menu-phone">
-                <a href="#">
-                    <i class="fas fa-phone"> +48 508-987-001</i>
-                </a>
+        </nav>
+    </header>
+
+    <div class="img-top"></div>
+
+    <div class="content">
+        <section class="cust-fav">
+            <h1>Customer favorite</h1>
+            <div>
+                <img src="img/stars.jpg" alt="hamburger">
+                <h4>Hamburger</h4>
+                <p>lorem</p>
+                <button>Przycisk</button>
             </div>
-        </div>
-        <div class="btn-hamburger">
-            <i class="fas fa-hamburger"></i>
-        </div>
-    </nav>
+            <div>
+                <img src="img/stars.jpg" alt="hamburger">
+                <h4>Pizza</h4>
+                <p>Jakiś tekt</p>
+                <button>Przycisk</button>
+            </div>
+            <div>
+                <img src="img/stars.jpg" alt="hamburger">
+                <h4>Zapiekanka</h4>
+                <p>Jakiś tekt</p>
+                <button>Przycisk</button>
+            </div>
+        </section>
+    </div>
 </body>
 
 <script src="js/scripts.js"></script>
